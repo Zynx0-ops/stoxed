@@ -77,6 +77,34 @@
     color-scheme: dark;
   }
 }
+:root[data-theme="dark"] {
+  --bg: #000000;
+  --surface: #161618;
+  --surface-2: #1C1C1F;
+  --sunken: #0E0E10;
+  --ink: #F5F5F7;
+  --ink-2: #C7C7CC;
+  --ink-3: #8E8E93;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-2: rgba(255, 255, 255, 0.14);
+  --bull: #22C98E;
+  --bull-deep: #13A574;
+  --bull-soft: rgba(34, 201, 142, 0.14);
+  --bear: #FF5A6E;
+  --bear-deep: #E03A50;
+  --bear-soft: rgba(255, 90, 110, 0.14);
+  --accent: #4C82FF;
+  --accent-deep: #2D63E3;
+  --accent-soft: rgba(76, 130, 255, 0.16);
+  --locked: #2A2A2E;
+  --locked-deep: #1F1F22;
+  --c-grid: rgba(255, 255, 255, 0.06);
+  --c-axis: #75757B;
+  --shadow-2: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -8px rgba(0, 0, 0, 0.6);
+  --shadow-3: 0 2px 6px rgba(0, 0, 0, 0.4), 0 24px 48px -12px rgba(0, 0, 0, 0.8);
+  color-scheme: dark;
+}
+
 
 /* ===========================================================
    Base
@@ -150,7 +178,7 @@ b { font-weight: 650; }
    Top bar
    =========================================================== */
 .topbar {
-  position: sticky; top: 0; z-index: 20;
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
   background: color-mix(in srgb, var(--bg) 78%, transparent);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
@@ -378,7 +406,7 @@ b { font-weight: 650; }
 .screen-lesson, .screen-results { min-height: 100vh; min-height: 100dvh; }
 .lesson { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
 .ltop {
-  position: sticky; top: 0; z-index: 5;
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
   display: flex; align-items: center; gap: 14px;
   max-width: 1000px; width: 100%; margin: 0 auto; padding: 18px 16px 10px;
   background: linear-gradient(var(--bg) 70%, transparent);
@@ -632,7 +660,7 @@ b { font-weight: 650; }
   background: color-mix(in srgb, var(--bg) 82%, transparent);
   -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px);
   transition: background 0.25s;
-  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 .foot-in { max-width: 1000px; margin: 0 auto; padding: 18px 16px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
 .foot-note { color: var(--ink-3); font-size: 14px; font-weight: 600; }
