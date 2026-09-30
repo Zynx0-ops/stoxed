@@ -59,9 +59,9 @@ async function answer(step) {
     return true;
   }
   if (t === 'match') {
-    for (const [l, r] of step.pairs) {
-      await page.locator('.mt:not(.done)', { hasText: l }).first().click();
-      await page.locator('.mt:not(.done)', { hasText: r }).first().click();
+    for (const [leftLabel, rightLabel] of step.pairs) {
+      await page.locator('.match-col').nth(0).getByRole('button', { name: leftLabel, exact: true }).click();
+      await page.locator('.match-col').nth(1).getByRole('button', { name: rightLabel, exact: true }).click();
       await page.waitForTimeout(450);
     }
     return true;
