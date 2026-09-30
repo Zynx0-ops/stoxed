@@ -78,8 +78,10 @@ Add an object to `lessons` in `js/content.js` and reference its `id` from a unit
 ```bash
 npm install            # installs Playwright
 npm start &            # serves on :8765
-npm test               # plays every lesson end to end in headless Chromium
+npm test               # plays every lesson and checks simulated phone safe areas
 ```
+
+The safe-area checks cover light and dark themes with simulated 44px top and 34px bottom insets, including header overlap and the lesson footer. They do not replace testing on a physical notched device.
 
 ---
 
