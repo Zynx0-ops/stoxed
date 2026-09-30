@@ -124,6 +124,7 @@ body {
   overflow-x: hidden;
 }
 h1, h2, h3 { letter-spacing: -0.022em; line-height: 1.15; margin: 0; }
+.screen-home, .screen-lesson, .screen-results { padding-top: env(safe-area-inset-top, 0px); }
 button { font: inherit; color: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
 button:disabled { cursor: default; }
 :focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent); outline-offset: 2px; border-radius: 12px; }

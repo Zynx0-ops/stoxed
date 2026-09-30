@@ -5,7 +5,7 @@
   "description": "Learn stock trading and chart reading through bite-sized, gamified lessons.",
   "scripts": {
     "start": "npx --yes serve -l 8765 .",
-    "test": "node tests/playthrough.mjs http://localhost:8765/"
+    "test": "node tests/playthrough.mjs http://localhost:8765/ && node tests/safe-area.mjs http://localhost:8765/"
   },
   "devDependencies": {
     "playwright": "^1.56.1"
